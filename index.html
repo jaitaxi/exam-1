@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> STUDENT DATA</title>
+</head>
+
+<body>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+
+        form {
+            width: 30%;
+            margin: auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #ffffff;
+        }
+
+        input,
+        select {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            margin-top: 10px;
+            border: none;
+            border-radius: 5px;
+            background-color: #4caf50;
+            color: white;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        table {
+            width: 90%;
+            margin: 20px auto;
+            border-collapse: collapse;
+        }
+
+        th,
+        td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: center;
+        }
+
+        th {
+            background-color: #ADD2EC;
+        }
+
+        img {
+            max-width: 100px;
+            height: auto;
+        }
+
+        #deleteAllBtn {
+            margin: 20px auto;
+            display: block;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            background-color: #f44336;
+            color: white;
+            cursor: pointer;
+        }
+    </style>
+    <!-- form-section -->
+    <form id="form">
+        <h1>STUDENT DATA</h1>
+        <input type="text" id="name" placeholder="Name of student" required />
+        <input type="file" id="image" accept="image/*" placeholder="Image" required />
+        <select id="medium" required>
+            <option value="Select Medium">Select Medium</option>
+            <option value="Gujarati">Gujarati</option>
+            <option value="Hindi">Hindi</option>
+            <option value="English">English</option>
+        </select>
+        <select id="group" required>
+            <option value="Select Group">Select Group</option>
+            <option value="Group-A">Group-A</option>
+            <option value="Group-B">Group-B</option>
+        </select>
+        <input type="number" id="grid" placeholder="GRID" required />
+        <input type="email" id="email" placeholder="Contact Email" required />
+        <input type="text" id="grade" placeholder="Grade" required />
+        <input type="submit" id="button" value="Add" />
+    </form>
+
+    <hr>
+    <!-- table-section -->
+    <table border="1px solid black" cellspacing="10px" cellpadding="10px">
+        <thead>
+            <tr>
+                <th>Student name</th>
+                <th>Image</th>
+                <th>Medium</th>
+                <th>Group</th>
+                <th>GRID</th>
+                <th>Contact Email</th>
+                <th>Grade</th>
+                <th>Remove</th>
+            </tr>
+        </thead>
+        <tbody id="data"> </tbody>
+    </table>
+
+    <div>
+        <button id="deleteAllBtn">Delete All</button>
+    </div>
+
+
+</body>
+    <script src="./index.js"></script>
+</html>
